@@ -55,22 +55,22 @@ def summarize_single_pdf(pdf_path, output_dir):
     # initialize model
     llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview", temperature=0)
 
-    # 3. Construct Payload
+    # construct payload
     message_content = []
 
     prompt_text = f"""
     You are an expert academic tutor. I have provided images of lecture notes for: "{file_name}".
     
     Task:
-    1. Extract Major Topics and Sub-topics.
+    1. Extract major topics and sub-topics.
     2. Provide a concise summary for each sub-topic.
     3. IMPORTANT: Interpret diagrams/charts and transcribe math equations into LaTeX ($...$).
-    
-    Output strictly in Markdown format starting with the Title:
-    # {file_name}
-    
-    ## [Topic]
-    ...
+
+    These are some requirements that you must follow:
+    - The output must strictly be in markdown format.
+    - Do not include examples.
+    - Only use headers to denote hierachy.
+    - There should only be one layer of sub-topics under a major topic.
     """
 
     message_content.append({"type": "text", "text": prompt_text})
@@ -83,7 +83,7 @@ def summarize_single_pdf(pdf_path, output_dir):
             }
         )
 
-    # 4. Invoke Model
+    # invoke model
     try:
         print(f"Sending to Gemini ({len(base64_images)} slides)...")
         response = llm.invoke([HumanMessage(content=message_content)])
