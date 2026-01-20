@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="label" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Differentiation Of Complex Functions">
+      <data key="d0">Major_topic</data>
+    </node>
+    <node id="Complex Functions">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Definition And Mapping">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Diagram Interpretation: Mapping Process">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Limit And Continuity">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Limit Of A Complex Function">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Continuity">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Differentiability And Analyticity">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Derivatives Of Complex Functions">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Analytic Functions">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Cauchy-Riemann Equations">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Testing For Analyticity">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Derivative Expressions Via C-R Equations">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Common Analytic Functions">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Complex Numbers">
+      <data key="d0">Major_topic</data>
+    </node>
+    <node id="Fundamentals Of Complex Numbers">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Definition And Geometric Representation">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Modulus And Argument">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Complex Conjugate">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Euler'S Formula And Algebraic Operations">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Euler'S Formula And Polar Form">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Arithmetic Operations">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="De Moivre'S Formula And Roots">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="De Moivre'S Formula">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Roots Of Complex Numbers">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Exponential Function">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Complex Logarithm And General Power">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Complex Integration">
+      <data key="d0">Major_topic</data>
+    </node>
+    <node id="Fundamentals Of Complex Line Integrals">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Definition And Parametric Representation">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Evaluation Method">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Basic Properties Of Complex Line Integrals">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Topology Of The Complex Plane">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Simple Closed Paths">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Simply And Multiply Connected Domains">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Cauchy’S Integral Theorems And Formulas">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Cauchy’S Integral Theorem">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Independence Of Path">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Cauchy’S Integral Formula">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Extension To Multiply Connected Domains">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Applications To Real Integrals">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Evaluation Of Trigonometric Integrals">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <node id="Improper Integrals Of Rational Functions">
+      <data key="d0">Sub_topic</data>
+    </node>
+    <edge source="Complex Functions" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Complex Functions" target="Limit And Continuity">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Complex Functions" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Definition And Mapping" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Diagram Interpretation: Mapping Process" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Limit And Continuity" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Limit And Continuity" target="Differentiability And Analyticity">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Limit Of A Complex Function" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Limit Of A Complex Function" target="Continuity">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Limit Of A Complex Function" target="Derivatives Of Complex Functions">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Continuity" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Differentiability And Analyticity" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Differentiability And Analyticity" target="Cauchy-Riemann Equations">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Derivatives Of Complex Functions" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Derivatives Of Complex Functions" target="Analytic Functions">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Analytic Functions" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Analytic Functions" target="Testing For Analyticity">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Analytic Functions" target="Common Analytic Functions">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Cauchy-Riemann Equations" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Testing For Analyticity" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Testing For Analyticity" target="Derivative Expressions Via C-R Equations">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Derivative Expressions Via C-R Equations" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Common Analytic Functions" target="Differentiation Of Complex Functions">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Fundamentals Of Complex Numbers" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Definition And Geometric Representation" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Definition And Geometric Representation" target="Modulus And Argument">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Definition And Geometric Representation" target="Complex Conjugate">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Definition And Geometric Representation" target="Arithmetic Operations">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Definition And Geometric Representation" target="Exponential Function">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Modulus And Argument" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Modulus And Argument" target="Euler'S Formula And Polar Form">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Modulus And Argument" target="Complex Logarithm And General Power">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Complex Conjugate" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Complex Conjugate" target="Arithmetic Operations">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Euler'S Formula And Algebraic Operations" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Euler'S Formula And Polar Form" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Euler'S Formula And Polar Form" target="Arithmetic Operations">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Euler'S Formula And Polar Form" target="De Moivre'S Formula">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Euler'S Formula And Polar Form" target="Exponential Function">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Arithmetic Operations" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="De Moivre'S Formula And Roots" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="De Moivre'S Formula" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="De Moivre'S Formula" target="Roots Of Complex Numbers">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Roots Of Complex Numbers" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Exponential Function" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Exponential Function" target="Complex Logarithm And General Power">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Complex Logarithm And General Power" target="Complex Numbers">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Fundamentals Of Complex Line Integrals" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Fundamentals Of Complex Line Integrals" target="Cauchy’S Integral Theorems And Formulas">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Definition And Parametric Representation" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Definition And Parametric Representation" target="Evaluation Method">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Evaluation Method" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Basic Properties Of Complex Line Integrals" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Topology Of The Complex Plane" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Simple Closed Paths" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Simple Closed Paths" target="Simply And Multiply Connected Domains">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Simply And Multiply Connected Domains" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Simply And Multiply Connected Domains" target="Cauchy’S Integral Theorem">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Simply And Multiply Connected Domains" target="Extension To Multiply Connected Domains">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Cauchy’S Integral Theorems And Formulas" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Cauchy’S Integral Theorems And Formulas" target="Applications To Real Integrals">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Cauchy’S Integral Theorem" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Cauchy’S Integral Theorem" target="Independence Of Path">
+      <data key="d1">PREREQUISITE</data>
+    </edge>
+    <edge source="Independence Of Path" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Cauchy’S Integral Formula" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Extension To Multiply Connected Domains" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Applications To Real Integrals" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Evaluation Of Trigonometric Integrals" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+    <edge source="Improper Integrals Of Rational Functions" target="Complex Integration">
+      <data key="d1">PART_OF</data>
+    </edge>
+  </graph>
+</graphml>

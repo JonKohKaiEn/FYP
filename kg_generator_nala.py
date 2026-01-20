@@ -20,8 +20,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 load_dotenv()
 NALA_API_KEY = os.getenv("NALA_API_KEY")
 
-# --- 1. NALA API CLIENT (With Multimodal Support) ---
-
 
 class NalaWrapper:
     """
@@ -37,7 +35,7 @@ class NalaWrapper:
             "Content-Type": "application/xml",
         }
 
-    def invoke(self, system_prompt, user_text, base64_images=None, max_retries=3):
+    def invoke(self, system_prompt, user_text, base64_images=None, max_retries=5):
         """
         Constructs the XML payload with text and optional base64 images.
         """
