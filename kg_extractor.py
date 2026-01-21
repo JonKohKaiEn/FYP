@@ -74,7 +74,6 @@ class ExtractorAgent:
 
 class GraphAgent:
     def __init__(self, model_name: str):
-        # We use Flash here as it is faster/cheaper for pure text processing
         self.llm = ChatGoogleGenerativeAI(
             model=model_name,
             temperature=0,  # Zero temp for consistent entity extraction
@@ -187,14 +186,14 @@ def run_pipeline(input_dir, output_dir):
         graph_path = os.path.join(output_dir, "knowledge_graph.graphml")
         nx.write_graphml(master_graph, graph_path)
         print(f"\n[Success] Knowledge Graph saved to {graph_path}")
-        print("You can open this .graphml file in Gephi or Cytoscape.")
+        print("You can open this .graphml file in Gephi.")
     else:
         print("\n[Warning] No graph data was generated.")
 
 
 if __name__ == "__main__":
     INPUT_FOLDER = "./sources/lecture notes/"
-    OUTPUT_FOLDER = "./sources/reference markdown/"
+    OUTPUT_FOLDER = "./sources/output/"
 
     if os.path.exists(INPUT_FOLDER):
         run_pipeline(INPUT_FOLDER, OUTPUT_FOLDER)
