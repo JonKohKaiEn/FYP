@@ -135,7 +135,7 @@ class GraphAgent:
         return G
 
 
-def run_pipeline(input_dir, output_dir):
+def run_pipeline(input_dir, md_dir, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -151,8 +151,15 @@ def run_pipeline(input_dir, output_dir):
 
     master_graph = nx.DiGraph()
 
-    for pdf_path in pdf_files:
+    for pdf_path in sorted(pdf_files):
         file_stem = Path(pdf_path).stem
+        md_path = os.path.join(md_dir, f"{file_stem}.md")
+        
+        # Skip if markdown already exists
+        if os.path.exists(md_path):
+            print(f"\n--- Skipping: {file_stem} (markdown already exists) ---")
+            continue
+        
         print(f"\n--- Processing: {file_stem} ---")
 
         # Extraction
@@ -160,7 +167,6 @@ def run_pipeline(input_dir, output_dir):
             markdown_summary = extractor.process(pdf_path)[0]["text"]
 
             # Save Markdown locally (as an intermediate artifact)
-            md_path = os.path.join(output_dir, f"{file_stem}.md")
             with open(md_path, "w", encoding="utf-8") as f:
                 f.write(markdown_summary)
             print(f"  [System] Markdown saved to {md_path}")
@@ -193,9 +199,10 @@ def run_pipeline(input_dir, output_dir):
 
 if __name__ == "__main__":
     INPUT_FOLDER = "./sources/lecture notes/"
+    MD_FOLDER = "./sources/markdown/"
     OUTPUT_FOLDER = "./sources/output/"
 
     if os.path.exists(INPUT_FOLDER):
-        run_pipeline(INPUT_FOLDER, OUTPUT_FOLDER)
+        run_pipeline(INPUT_FOLDER, MD_FOLDER, OUTPUT_FOLDER)
     else:
         print(f"Please create '{INPUT_FOLDER}' and add your PDF files.")

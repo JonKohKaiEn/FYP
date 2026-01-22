@@ -13,8 +13,6 @@ from pdf2image import convert_from_path
 
 # LangChain & Graph Imports
 from langchain_core.documents import Document
-from langchain_experimental.graph_transformers import LLMGraphTransformer
-from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Load Environment Variables
 load_dotenv()
@@ -142,7 +140,7 @@ class NalaExtractorAgent:
 
         full_markdown = f"# Summary: {Path(pdf_path).stem}\n\n"
 
-        BATCH_SIZE = 5
+        BATCH_SIZE = 1
 
         for i in range(0, total_slides, BATCH_SIZE):
             batch_images = all_images[i : i + BATCH_SIZE]
@@ -222,7 +220,7 @@ def run_pipeline(input_dir, output_dir):
 
 if __name__ == "__main__":
     INPUT_FOLDER = "./sources/lecture notes/"
-    OUTPUT_FOLDER = "./sources/reference markdown/"
+    OUTPUT_FOLDER = "./sources/markdown/"
 
     if os.path.exists(INPUT_FOLDER):
         run_pipeline(INPUT_FOLDER, OUTPUT_FOLDER)
