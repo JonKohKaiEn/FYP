@@ -19,7 +19,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 load_dotenv()
 
 
-class ExtractorAgent:
+class Extractor:
     def __init__(self, model_name: str):
         self.llm = ChatGoogleGenerativeAI(model=model_name, temperature=0)
 
@@ -72,7 +72,7 @@ class ExtractorAgent:
         return response.content
 
 
-class GraphAgent:
+class GraphBuilder:
     def __init__(self, model_name: str):
         self.llm = ChatGoogleGenerativeAI(
             model=model_name,
@@ -146,8 +146,8 @@ def run_pipeline(input_dir, md_dir, output_dir):
         return
 
     # Initialize Agents
-    extractor = ExtractorAgent("gemini-3-flash-preview")
-    graph_builder = GraphAgent("gemini-3-flash-preview")
+    extractor = Extractor("gemini-3-flash-preview")
+    graph_builder = GraphBuilder("gemini-3-flash-preview")
 
     master_graph = nx.DiGraph()
 

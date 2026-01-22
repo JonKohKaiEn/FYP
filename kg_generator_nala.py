@@ -6,7 +6,6 @@ import io
 import base64
 import json
 
-# import networkx as nx
 from pathlib import Path
 from dotenv import load_dotenv
 from pdf2image import convert_from_path
@@ -51,8 +50,6 @@ class NalaWrapper:
         full_prompt = safe_user_text
 
         if base64_images:
-            # Append images to the prompt.
-            # We add context so the model knows these strings are images.
             for i, img_str in enumerate(base64_images):
                 full_prompt += f"\n\n[Slide {i + 1} Image Data Start]\n"
                 full_prompt += f"data:image/jpeg;base64,{img_str}"
@@ -109,7 +106,7 @@ class NalaWrapper:
         return None
 
 
-class NalaExtractorAgent:
+class NalaExtractor:
     def __init__(self):
         if not NALA_API_KEY:
             raise ValueError("NALA_API_KEY not found in environment variables.")
@@ -118,7 +115,6 @@ class NalaExtractorAgent:
     def pdf_to_base64(self, pdf_path):
         """Converts PDF pages to list of base64 strings."""
         print("  [Extractor] Converting PDF to images...")
-        # dpi=150 is a good balance for OCR/Vision without massive file size
         images = convert_from_path(pdf_path, dpi=150)
 
         encoded_images = []
@@ -134,7 +130,6 @@ class NalaExtractorAgent:
         """
         Main extraction logic. Batches slides to avoid overloading the API.
         """
-        # 1. Convert PDF to Images
         all_images = self.pdf_to_base64(pdf_path)
         total_slides = len(all_images)
 
@@ -165,7 +160,6 @@ class NalaExtractorAgent:
             - There should only be one layer of sub-topics under a major topic.
             """
 
-            # 3. Call Nala API with the batch
             batch_response = self.client.invoke(
                 system_instruction, user_instruction, batch_images
             )
@@ -177,7 +171,6 @@ class NalaExtractorAgent:
                     f"\n> [Error processing slides {i + 1}-{i + BATCH_SIZE}]\n\n"
                 )
 
-            # Be nice to the API
             time.sleep(1)
 
         return full_markdown
@@ -193,8 +186,7 @@ def run_pipeline(input_dir, output_dir):
         print(f"No PDFs found in {input_dir}")
         return
 
-    # Initialize Agents
-    extractor = NalaExtractorAgent()
+    extractor = NalaExtractor()
     # graph_builder = GraphAgent()
 
     # master_graph = nx.DiGraph()
@@ -203,7 +195,6 @@ def run_pipeline(input_dir, output_dir):
         file_stem = Path(pdf_path).stem
         print(f"\n=== Starting File: {file_stem} ===")
 
-        # --- Step 1: Extract (Nala API) ---
         try:
             markdown_summary = extractor.process(pdf_path)
 
