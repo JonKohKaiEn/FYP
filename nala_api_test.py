@@ -1,28 +1,18 @@
-import requests
 import os
 from dotenv import load_dotenv
-import json
+from nala_wrappers import NalaGPTWrapper
 
 load_dotenv()
 API_KEY = os.getenv("NALA_API_KEY")
+llm = NalaGPTWrapper(API_KEY)
 
-base_url = "https://nala.ntu.edu.sg"
-
-headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/xml"}
-
-xml_payload = """
-<llm_request>
-    <model>gemini-3-pro-preview</model>
-    <system_prompt>You are a precise and technical assistant.</system_prompt>
-    <hyperparameters>
-        <temperature>0</temperature>
-        <top_k>5</top_k>
-    </hyperparameters>
-    <user_prompt>Explain the concept of transfer learning in AI in simple terms.</user_prompt>
-</llm_request>
+system_prompt: str = """
+You will be given a question. You are to extract the topics that are tested in the question.
+**Only** respond with a list of topics, separated by commas.
+"""
+user_prompt: str = """
+Using the Cauchy-Riemann equations, determine the analycity of the function $f(z)=z^2-2z+3$ and find its derivative.
 """
 
-print("Sending request...")
-x = requests.post(base_url + "/api/llm/", headers=headers, data=xml_payload)
-print(x.status_code)
-print(json.loads(x.text)["message"])
+response = llm.invoke(system_prompt, user_prompt)
+print(response)

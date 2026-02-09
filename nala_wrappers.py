@@ -1,5 +1,6 @@
 import requests
 import time
+import json
 
 
 class NalaGeminiWrapper:
@@ -89,7 +90,7 @@ class NalaGPTWrapper:
     Wrapper for NALA API Gemini endpoint to adapt it to LangChain model interface.
     """
 
-    def __init__(self, api_key: str, model: str) -> None:
+    def __init__(self, api_key: str, model: str = "gpt-5") -> None:
         self.api_key = api_key
         self.model = model
         self.base_url = "https://nala.ntu.edu.sg/api/llm/"
@@ -98,7 +99,7 @@ class NalaGPTWrapper:
             "Content-Type": "application/xml",
         }
 
-    def invoke(self, system_prompt: str, user_text: str, max_retries: int = 5) -> str:
+    def invoke(self, system_prompt: str, user_text: str, max_retries: int = 5):
         """
         Constructs the XML payload with text.
         """
@@ -133,8 +134,8 @@ class NalaGPTWrapper:
 
                 # Check for success
                 if response.status_code == 200:
-                    return response.text
-
+                    response_json = json.loads(response.text)
+                    return response_json["raw"]["output"][1]["content"][0]["text"]
                 # Check specifically for 502 Bad Gateway (or 503 Service Unavailable)
                 elif response.status_code in [502, 503, 504]:
                     wait_time = 2 ** (attempt + 1)  # Exponential Backoff: 2s, 4s, 8s

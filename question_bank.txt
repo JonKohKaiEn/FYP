@@ -1,0 +1,1 @@
+Using the Cauchy-Riemann equations, determine the analycity of the function $f(z)=z^2-2z+3$ and find its derivative.
