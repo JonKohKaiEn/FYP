@@ -1,0 +1,16 @@
+Question: How do I do Gaussian Elimination method?
+Model: GPT 	 Response: Gaussian elimination, systems of linear equations, augmented matrix, elementary row operations, row-echelon form, pivot elements, forward elimination, back substitution
+Model: Gemini 	 Response: Linear Algebra, Systems of Linear Equations, Gaussian Elimination, Matrices, Row Operations
+====================
+Question: How do I get the eigenvalue of a matrix?
+Model: GPT 	 Response: Eigenvalues, Matrices, Characteristic polynomial, Determinant, Characteristic equation
+Model: Gemini 	 Response: Linear Algebra, Matrices, Eigenvalues, Determinants, Characteristic Equation
+====================
+Question: Using the Cauchy-Riemann equations, determine the analycity of the function $f(z)=z^2-2z+3$ and find its derivative.
+Model: GPT 	 Response: Cauchy-Riemann equations, Analyticity (holomorphicity) of complex functions, Complex differentiation, Polynomials in complex analysis
+Model: Gemini 	 Response: Cauchy-Riemann Equations, Analytic Functions, Complex Differentiation
+====================
+Question: Find a unit normal to the surface defined by $x^{2}y+2xz=4$ at the point (2,-2,3).
+Model: GPT 	 Response: Gradient of a scalar field, Normal to a level surface, Unit normal vector, Evaluating the gradient at a point
+Model: Gemini 	 Response: Multivariable Calculus, Partial Derivatives, Gradient Vectors, Normal Vectors, Unit Vectors
+====================
