@@ -1,6 +1,7 @@
 import requests
 import time
 import json
+from jsonpath_ng import parse
 
 
 class NalaGeminiWrapper:
@@ -56,6 +57,8 @@ class NalaGeminiWrapper:
                 # Check for success
                 if response.status_code == 200:
                     response_json = json.loads(response.text)
+                    # json_expr = parse("$..text")
+                    # return json_expr.find(response_json)
                     return response_json["raw"]["candidates"][0]["content"]["parts"][0][
                         "text"
                     ]
@@ -138,7 +141,10 @@ class NalaGPTWrapper:
                 # Check for success
                 if response.status_code == 200:
                     response_json = json.loads(response.text)
+                    # json_expr = parse("$..text")
+                    # return json_expr.find(response_json)
                     return response_json["raw"]["output"][1]["content"][0]["text"]
+
                 # Check specifically for 502 Bad Gateway (or 503 Service Unavailable)
                 elif response.status_code in [502, 503, 504]:
                     wait_time = 2 ** (attempt + 1)  # Exponential Backoff: 2s, 4s, 8s
@@ -170,6 +176,7 @@ class NalaGPTWrapper:
 class NalaClaudeWrapper:
     """
     Wrapper for NALA API Claude endpoint to adapt it to LangChain model interface.
+    NOTE: API endpoint may not be working...
     """
 
     def __init__(self, api_key: str, model: str = "claude-opus-4.5") -> None:

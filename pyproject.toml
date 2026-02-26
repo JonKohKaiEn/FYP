@@ -5,10 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "jsonpath-ng>=1.7.0",
     "langchain-community>=0.4.1",
     "langchain-experimental>=0.4.1",
     "langchain-google-genai>=4.2.0",
     "networkx>=3.6.1",
     "pdf2image>=1.17.0",
+    "pix2tex[gui]>=0.1.4",
+    "pix2text>=1.1.6",
     "python-dotenv>=1.2.1",
 ]
