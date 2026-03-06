@@ -5,7 +5,7 @@ from nala_wrappers import NalaGPTWrapper, NalaGeminiWrapper
 load_dotenv()  # get API key
 API_KEY: str = os.getenv("NALA_API_KEY")
 
-llm_list = [("GPT", NalaGPTWrapper(API_KEY)), ("Gemini", NalaGeminiWrapper(API_KEY))]
+llm_list = [("GPT", NalaGPTWrapper(API_KEY))]
 
 # load system prompt
 with open("system_prompt.md", mode="r") as f:
