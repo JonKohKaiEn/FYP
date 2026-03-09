@@ -34,7 +34,7 @@ def extract_questions_to_markdown(pdf_path_str, output_filename):
         """
 
         response = client.models.generate_content(
-            model="gemini-2.5-pro", contents=[uploaded_file, prompt]
+            model="gemini-3.1-flash-lite-preview", contents=[uploaded_file, prompt]
         )
 
         # save to markdown file
@@ -60,4 +60,3 @@ if __name__ == "__main__":
         extract_questions_to_markdown(pdf_file_path, output_markdown_file)
     else:
         print(f"File not found: {pdf_file_path}")
-

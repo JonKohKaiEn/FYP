@@ -1,0 +1,244 @@
+Solve the linear system using the Gaussian elimination method.
+
+(a)
+$$
+\begin{cases}
+-3x - 2y + 2z = -2 \\
+-x - 3y + z = -3 \\
+x - 2y + z = -2
+\end{cases}
+$$
+
+(b)
+$$
+\begin{cases}
+-2x - 2y + 2z = 1 \\
+x + 5z = -1 \\
+3x + 2y + 3z = -2
+\end{cases}
+$$
+
+(c)
+$$
+\begin{cases}
+-x_1 + 3x_3 + x_4 = 2 \\
+2x_1 + 3x_2 - 3x_3 + x_4 = 2 \\
+2x_1 - 2x_2 - 2x_3 - x_4 = 2
+\end{cases}
+$$
+
+(d)
+$$
+\begin{cases}
+3x_1 - 3x_2 + x_3 + 3x_4 = 3 \\
+x_1 + x_2 - x_3 - 2x_4 = 3 \\
+4x_1 - 2x_2 + x_4 = 0
+\end{cases}
+$$
+
+Find the reduced row echelon form of the matrices
+
+(a)
+$$
+\begin{bmatrix}
+-2 & 2 & -1 & 2 \\
+0 & 3 & 3 & -3 \\
+1 & -4 & 2 & 2
+\end{bmatrix}
+$$
+
+(b)
+$$
+\begin{bmatrix}
+4 & -3 & -4 & -2 \\
+-4 & 2 & 1 & -4 \\
+-1 & -3 & 1 & -4
+\end{bmatrix}
+$$
+
+Can you write a computer program to convert a $m \times n$ matrix to reduced row echelon form?
+
+The augmentation matrix of a linear system has the form
+$$
+\begin{bmatrix}
+-2 & 3 & 1 & a \\
+1 & 1 & -1 & b \\
+0 & 5 & -1 & c
+\end{bmatrix}
+$$
+
+(a) Determine the values of $a$, $b$ and $c$ for which the linear system is consistent.
+(b) Determine the values of $a$, $b$ and $c$ for which the linear system is inconsistent.
+(c) When it is consistent, does the linear system have a unique solution or infinitely many solutions?
+(d) Give a specific consistent linear system and find one particular solution.
+
+The augmented matrix
+$$
+\begin{bmatrix}
+k & 1 & 1 & 1 & a \\
+1 & k & 1 & 1 & 1 \\
+1 & 1 & k & 1 & 1 \\
+1 & 1 & 1 & k & 1
+\end{bmatrix}
+$$
+represents a system of linear equations with 4 unknowns. Determine the values of $k$ and $a$ such that the system has (i) no solution, (ii) unique solution, and (iii) many solutions.
+
+The augmented matrix
+$$
+\begin{bmatrix}
+40 & 70 & 50 & 12 & 120 \\
+20 & 10 & 40 & 56 & 30 \\
+40 & 30 & 60 & 92 & b \\
+10 & 11 & 15 & c & a
+\end{bmatrix}
+$$
+represents a system of linear equations with 4 unknowns.
+Determine the values of $a, b, c$ such that the system has (i) unique solution, (ii) many solutions, (iii) no solution, and (iv) with $a = 22, b = 70$, write down the solution for cases (i) and (ii).
+
+A dietician is planning a meal to supply certain quantities of calcium, potassium, magnesium and zinc. Three types of food will be used. One packet of food type A contains 40mg of calcium, 20mg of potassium, 40mg of magnesium and 10mg of zinc. One packet of food type B contains 70mg of calcium, 10mg of potassium, 30mg of magnesium and 11mg of zinc. One packet of food type C contains 50mg of calcium, 40mg of potassium, 60mg of magnesium and 15mg of zinc.
+
+(a) If a meal is to contain 120mg of calcium, 30mg of potassium, 70mg of magnesium and 22mg of zinc, set up a system of equations to find how many packets of food types A, B, and C should be consumed in a meal to meet the dietary requirements. Suppose it is only possible to mix whole packets of food types A, B and C to prepare the required meal, how would you advise the dietician to prepare the meal, and state how many meals would the dietician prepared with your advise. Are there any other ratio of food types A, B and C which would satisfy the requirement?
+(b) Can the dietician prepare a meal to contain 120mg of calcium, 30mg of potassium, 70mg of magnesium but with varying amount of zinc? Why?
+(c) What combinations of magnesium and zinc can the dietician prepare if the meal is to contain 120mg of calcium and 30mg of potassium?
+(d) The dietician wanted to introduce a new food type D so that meals with any required nutrition mixed can be prepared. She decided that one packet of the new food type D should contain 12mg of calcium, 56mg of potassium, 92mg of magnesium but could not decide on the amount of zinc. What recommendation would you give to the dietician? Why?
+(e) With your proposal in part (d), would the dietician now be able to produce meals at will? Justify your answer.
+
+For the circuit shown in Fig 1, set up a system of three equations for the loop currents $I_1, I_2, I_3$. Write the corresponding augmented matrix and hence find the exact solution in terms of the unspecified voltages $V_1, V_2$.
+
+Find the interpolating polynomial $p(t) = a_0 + a_1t + a_2t^2$ that passes through the points $(1, 12), (2, 15), (3, 16)$.
+
+Let
+$$
+A = \begin{bmatrix} 2 & 0 & -1 \\ 1 & 0 & -2 \end{bmatrix}, B = \begin{bmatrix} -3 & 1 & 1 \\ -3 & 1 & 1 \end{bmatrix}, C = \begin{bmatrix} 3 & -1 \\ -1 & -3 \end{bmatrix}
+$$
+Whenever possible, perform the following operations. If a computation cannot be made, explain why.
+(a) $2A^T - B^T$, (b) $B^T - 2A$, (c) $AB^T$, (d) $BA^T$, (e) $(A^T + B^T)C$, (f) $C(A^T + B^T)$, (g) $(A^TC)B$, (h) $(A^TB^T)C$
+
+Let $\mathbf{a} = [a_1, a_2, a_3]^T$ and $\mathbf{x} = [x_1, x_2, x_3]^T$. Write the cross product $\mathbf{a} \times \mathbf{x}$ as a matrix-vector multiplication. In other words, find matrix $A$ such that $\mathbf{a} \times \mathbf{x} = A\mathbf{x}$.
+
+Let $\mathbf{c} = [c_1, c_2, \dots, c_n]^T$ be a n-vector which represents the cash flow for an interest bearing bank account over $n$ time periods. Positive values of $c_i$ indicate a deposit, and negative values indicate a withdrawal. Let $\mathbf{b} = [b_1, b_2, \dots, b_n]^T$ denotes the banks account balance in the same $n$ time periods. We have $b_1 = c_1$ and $b_t = (1 + r)b_{t-1} + c_t, t = 2, \dots, n$ where $r > 0$ is the per period interest rate. Express $\mathbf{b}$ in terms of $\mathbf{c}$, i.e., find the matrix $A$ such that $\mathbf{b} = A\mathbf{c}$.
+
+Consider the matrix
+$$
+K = \begin{bmatrix} I & A^T \\ A & 0 \end{bmatrix}
+$$
+make sense, which of the following statements must be true?
+(a) $K$ is square.
+(b) $A$ is square or wide.
+(c) $K$ is symmetric, i.e., $K^T = K$.
+(d) The identity and zero submatrices in $K$ have the same dimensions.
+(e) The zero submatrix is square.
+
+(a) If $A$ is 3-by-5, $B$ is 2-by-3, and if you stack the matrices $A, B, C$ and $D$ into a bigger $P$ matrix as $P = \begin{bmatrix} A & C \\ D & B \end{bmatrix}$, what should be the dimensions of matrix $C$ and matrix $D$?
+(b) If $A$ is 3-by-2 and $G$ is 3-by-4, what should the dimensions of matrices $B$ and $E$ be so that the matrix multiplication $\begin{bmatrix} A & B \end{bmatrix} \begin{bmatrix} E \\ G \end{bmatrix}$ make sense?
+(c) If $A$ is 3-by-2 and $B$ is 3-by-4, what should the dimensions of matrices $E$ and $G$ be so that the matrix multiplication $\begin{bmatrix} A & B \end{bmatrix} \begin{bmatrix} E \\ G \end{bmatrix}$ make sense?
+
+(a) Use ERO to derive the formula for the inverse of the 2-by-2 matrix $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$. What assumptions do you need for the inverse to exist?
+(b) Assuming that only $A$ is invertible, repeat part (a) for the block partition matrix $\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ where $A, B, C, D$ are matrices of compatible dimensions.
+(c) Repeat part (b), assuming that only $D$ is invertible.
+(d) What further assumptions do you need in parts (b) and (c) for the inverse of the block partition matrix $\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ to exist?
+
+(a) If $A$ is a $n \times n$ matrix, find $\det(3A)$, $\det(2A^{-1})$, and $\det[(2A)^{-1}]$, in terms of $\det(A)$.
+(b) If $A = \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}$ and $\det(A) = 10$, find $\det \begin{bmatrix} a & g & d \\ b & h & e \\ c & i & f \end{bmatrix}$.
+(c) List the properties of determinant that you have used in parts (a) and (b).
+
+(a) Find the matrix $P$ that will re-arrange the column vector $\mathbf{u} = [a, b, c, d, e, f]^T$ to $\mathbf{v} = [a, c, e, b, d, f]^T$.
+(b) Find the matrix $Q$ that will re-arrange the row vector $\mathbf{p} = [a, b, c]$ to $\mathbf{q} = [a, c, b]$.
+(c) If, in (b), the dimensions of $a, b,$ and $c$ are 2-by-2, 2-by-3, and 2-by-4 respectively. What will be the dimensions of $Q$? Write down the matrix $Q$. How would your answer change if the dimensions of $a, b,$ and $c$ are $n$-by-2, $n$-by-3, and $n$-by-4 respectively?
+
+Write down the elementary matrix, its determinant and inverse for each of the following elementary row operation on a $4 \times 4$ matrix?
+(a) Interchange rows 1 and 3
+(b) Multiply row 3 by a factor of 5
+(c) Add eight times of row 2 to row 1
+
+Find the determinant of the matrix
+$$
+\begin{bmatrix}
+-6 & 4 & 5 \\
+2 & 8 & 2 \\
+-1 & -4 & 2
+\end{bmatrix}
+$$
+
+Find the determinant of the matrix
+$$
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+-1 & 1 & 2 & 3 \\
+1 & -1 & 1 & 2 \\
+-1 & 1 & -1 & a
+\end{bmatrix}
+$$
+where $a$ is a real number. Leave your answer in terms of $a$.
+
+(a) Show that the determinant of the block partitioned matrix $\begin{bmatrix} I_n & 0 \\ 0 & B \end{bmatrix}$ is equal to $\det(B)$.
+(b) Show that $\det\left(\begin{bmatrix} A & C \\ 0 & I_m \end{bmatrix}\right) = \det(A)$.
+(c) Hence, or otherwise, show that $\det(P) = \det(A) \det(B)$ where $P$ is the block partitioned matrix $P = \begin{bmatrix} A & C \\ 0 & B \end{bmatrix}$ and the sub-matrices $A, B$ and $C$ have dimensions $n \times n, m \times m$ and $n \times m$ respectively.
+(d) Given that
+$A = \begin{bmatrix} 3 & 2 & 0 & 2 \\ 6 & 8 & 2 & 1 \\ 0 & 0 & 4 & 7 \\ 0 & 0 & 2 & 5 \end{bmatrix}$, $B = \begin{bmatrix} -6 & 4 & 5 \\ 2 & 8 & 2 \\ -1 & -4 & 2 \end{bmatrix}$, $C = \begin{bmatrix} 12 & 6 & 1 \\ 4 & 4 & 1 \\ 7 & 4 & 3 \\ 8 & 8 & 3 \end{bmatrix}$. Determine the determinant of the matrix $P = \begin{bmatrix} A & C \\ 0 & B \end{bmatrix}$.
+
+Refer to Tutorial 1, Exercise 1. Rephrase the question using the language of linear algebra using terms such as linearly independence/dependence, linear combination, span, column/row/null space, basis, etc.
+
+A dietician is planning a meal to supply certain quantities of calcium, potassium, magnesium and zinc by mixing different units of the following three basic food types: One unit of food type A contains 40mg of calcium, 20mg of potassium, 40mg of magnesium and 10mg of zinc. One unit of food type B contains 70mg of calcium, 10mg of potassium, 30mg of magnesium and 11mg of zinc. One unit of food type C contains 50mg of calcium, 40mg of potassium, 60mg of magnesium and 15mg of zinc. Let $A = [40, 20, 40, 10]^T$, $B = [70, 10, 30, 11]^T$, $C = [50, 40, 60, 15]^T$ be vectors representing food types A, B, C.
+
+(a) Show that A, B, C are linearly independent. What practical advantage does this have? What does $\text{Span}\{A, B, C\}$ represent? Give a practical interpretation to the linear combination $4A+9B+C$.
+(b) Show that the dietician cannot prepare a meal containing per unit nutrition $D = [12, 56, 92, 17]^T$ but can for $E = [120, 30, 68, 21.8]^T$. What does this say about the linear independence or dependence of the sets $\{A, B, C, D\}$ and $\{A, B, C, E\}$?
+(c) Find the amount of food type A, B, C mix needed to produce meal E. Is this solution unique? Explain.
+(d) The dietician decided to add a fourth basic food type so that meals with any required nutrient mixed can be prepared. Should the dietician choose D or E as the fourth basic food type?
+(e) Will there still be meals that cannot be physically produced from the proposed set of 4 basic food types? Explain.
+
+Determine whether the following are linearly independent or dependent. Justify your answers.
+(a) The vectors $[1, 1, 1]^T, [0, 1, 1]^T$ and $[1, 0, -1]^T$.
+(b) The matrices $\begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}, \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\begin{bmatrix} 2 & 2 \\ 1 & 1 \end{bmatrix}$.
+(c) The polynomials $p(x)=1+x, q(x)=1-x$ and $h(x)=1-x^2$.
+
+By using the results from Exercise 4-4, or otherwise, answer the following and justify your answers:
+(a) Are the vectors $[4, 1, 1, 1]^T, [1, 4, 1, 1]^T, [1, 1, 4, 1]^T, [1, 1, 1, 4]^T$ linearly independent?
+(b) Are the vectors $[-3, 1, 1, 1]^T, [1, -3, 1, 1]^T, [1, 1, -3, 1]^T, [1, 1, 1, -3]^T$ linearly independent?
+(c) Is the vector $[1, 2, 3, 4]^T$ in the column space of $\begin{bmatrix} 7 & 1 & 1 & 1 \\ 1 & 7 & 1 & 1 \\ 1 & 1 & 7 & 1 \\ 1 & 1 & 1 & 7 \end{bmatrix}$?
+
+If $A$ is a $3 \times 5$ non-zero matrix, explain why the columns of $A$ must be linearly dependent. What are the possible values of $\text{nullity}(A)$?
+
+Let $A = \begin{bmatrix} 1 & 3 & -2 & 0 & 2 & 0 \\ 2 & 6 & -5 & -2 & 4 & -3 \\ 0 & 0 & 5 & 10 & 0 & 15 \\ 2 & 6 & 0 & 8 & 4 & 18 \end{bmatrix}$, $\mathbf{d} = [0, -1, 5, 6]^T$ and $\mathbf{x} = [x_1, x_2, x_3, x_4, x_5, x_6]^T$.
+(a) Find all $\mathbf{x}$ which solve $A\mathbf{x} = \mathbf{d}$.
+(b) Hence, or otherwise, find a basis for the null space of $A$.
+(c) Let $\mathbf{b} = [b_1, b_2, b_3, b_4]^T$ where $b_i, i = 1, 2, 3, 4$ are real numbers. Find the condition for $b_1, b_2, b_3, b_4$ such that $A\mathbf{x} = \mathbf{b}$ is consistent.
+(d) Hence, or otherwise, find a basis for the column space of $A$.
+
+Explain how eigenvalues and eigenvectors are used to diagonalise a $n \times n$ matrix. What condition(s) is(are) needed so that a matrix A can be diagonalised?
+
+Let $A = \begin{bmatrix} 0 & 0 & 2 \\ 0 & 2 & 0 \\ 0 & 0 & -1 \end{bmatrix}$.
+(a) Find the eigenvalues of $A$.
+(b) From your result in part (a) can you conclude whether $A$ is diagonalizable? Explain.
+(c) Find the eigenvectors corresponding to each eigenvalue.
+(d) Are the eigenvectors found in part (c) linearly independent? Explain.
+(e) From your result in part (d) can you conclude whether $A$ is diagonalizable? Explain.
+(f) If your answer to part (e) is yes, find a matrix $P$ that diagonalizes $A$. Specify the diagonal matrix $D$ such that $D = P^{-1}AP$.
+
+Repeat the previous exercise with $A = \begin{bmatrix} 1 & 0 & 1 & 0 \\ 1 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 1 & 0 \end{bmatrix}$.
+
+Let $A = \begin{bmatrix} 0 & 0 & 2 \\ 1 & 2 & 1 \\ 1 & 0 & 3 \end{bmatrix}$.
+(a) Verify that $\mathbf{v}_1 = [-1, 0, 1]^T$ is an eigenvector of $A$, and also find its corresponding eigenvalue $\lambda_1$.
+(b) The eigenvalue $\lambda_1$ in part (a) has another eigenvector $\mathbf{v}_2$. Find $\mathbf{v}_2$.
+(c) Are the vectors $\mathbf{v}_1$ in part (a) and $\mathbf{v}_2$ in part (b) linearly independent? Justify your answer.
+(d) Hence, or otherwise, show that the matrix $A$ can be expressed at $A = PDP^{-1}$. State the numerical values of $P$ and $D$ matrices and find $P^{-1}$ by using the ERO (Elementary Row Operation) method.
+(e) Denote $D, P$ and $P^{-1}$ in part (c) as $D = \begin{bmatrix} \lambda_1 & & \\ & \lambda_2 & \\ & & \lambda_3 \end{bmatrix}, P = [\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3]$, and $P^{-1} = \begin{bmatrix} \mathbf{u}_1^T \\ \mathbf{u}_2^T \\ \mathbf{u}_3^T \end{bmatrix}$. Express $A$ as a linear combination of rank one matrices $\mathbf{v}_i\mathbf{u}_i^T, i = 1, 2, 3$. You need not compute numerically the rank one matrices.
+
+In an earlier Tutorial, we studied the determinant of block triangular matrices. We showed that $\det(P) = \det(A) \det(B)$ where $P$ is the block partitioned matrix $\begin{bmatrix} A & C \\ 0 & B \end{bmatrix}$ and the sub-matrices $A, B$ and $C$ have dimensions $n \times n, m \times m$ and $n \times m$ respectively. What can you say about the eigenvalues and eigenvectors of $P$? State all assumptions made. With the help of MATLAB, verify that your conclusion with the following numerical example (or any numerical example of your own):
+$A = \begin{bmatrix} 3 & 2 & 0 & 2 \\ 6 & 8 & 2 & 1 \\ 0 & 0 & 4 & 7 \\ 0 & 0 & 2 & 5 \end{bmatrix}, B = \begin{bmatrix} -6 & 4 & 5 \\ 2 & 8 & 2 \\ -1 & -4 & 2 \end{bmatrix}, C = \begin{bmatrix} 12 & 6 & 1 \\ 4 & 4 & 1 \\ 7 & 4 & 3 \\ 8 & 8 & 3 \end{bmatrix}$.
+
+Solve the following differential equation $\frac{d\mathbf{u}}{dt} = A\mathbf{u}$ where $A = \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & -1 \\ 0 & 1 & 0 \end{bmatrix}$, and $\mathbf{u}$ is a vector of appropriate dimensions. In addition, find a time $T$ at which the solution $\mathbf{u}(t)$ is equal to the initial value $\mathbf{u}(0)$. Justify your answer.
+
+Two brine storage tanks are connected with two pipes used to exchange solutions between them. The first pipe allows water from tank 1 to enter tank 2 at a rate of 5 litre/min. The second pipe reverses the process allowing water to flow from tank 2 to tank 1, also at a rate of 5 litre/min. Initially, the first tank contains a well-mixed solution of 8 kg of salt in 50 litre of water, while the second tank contains 100 litre of pure water.
+(a) Develop a mathematical model to describe the amount of salt in each tank at time $t$.
+(b) Determine the amount of salt in each tank at steady state and explain the result.
+
+A group of insurance plan allows three different options for participants, plan A, B, or C. Suppose that the percentages of the total number of participants enrolled in each plan are 25 percent, 30 percent, and 45 percent, respectively. Also, from past experience:
+(a) 15 percent and 10 percent of the participants who originally enrolled in plan A will switch to plan B and plan C respectively.
+(b) 25 percent and 30 percent of the participants who originally enrolled in plan B will switch to plan A and plan C respectively.
+(c) 20 percent and 40 percent of the participants who originally enrolled in plan C will switch to plan A and plan B respectively.
+Construct a mathematical model for this system, and hence determine, in the long term, the percentage of enrollment in each plan.
+
+Let $\mathbf{x}_{k+1} = A\mathbf{x}_k, k = 0, 1, 2, \dots$, where $A = \begin{bmatrix} 3 & -1 & 1 \\ -2 & 4 & 2 \\ -1 & 1 & 5 \end{bmatrix}, \mathbf{x}_0 = \begin{bmatrix} c_1 \\ c_2 \\ c_3 \end{bmatrix}$, and $c_1, c_2, c_3$ are unknown real constants.
+(a) Find the eigenvalues and eigenvectors of the matrix $A$.
+(b) Derive an expression for $\mathbf{x}_k$ as a linear combination of the eigenvectors you obtained in part (a).
