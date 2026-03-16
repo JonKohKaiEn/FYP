@@ -61,6 +61,7 @@ def extract_questions_to_csv(pdf_folder_str):
                     {
                         "major_topic": pdf_path.name.rstrip(".pdf"),
                         "question": question_text,
+                        "topics": "",
                     }
                 )
 
@@ -81,7 +82,9 @@ def extract_questions_to_csv(pdf_folder_str):
                 client.files.delete(name=uploaded_file.name)
 
     # convert extracted questions to Dataframe
-    output_df = pd.DataFrame(extracted_data, columns=["major_topic", "question"])
+    output_df = pd.DataFrame(
+        extracted_data, columns=["major_topic", "question", "topics"]
+    )
     return output_df
 
 
