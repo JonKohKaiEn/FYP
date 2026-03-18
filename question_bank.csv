@@ -1,13 +1,13 @@
 major_topic,question,topics
-complex_analysis,Find all the values of $\ln(i^{1/2})$.,
-complex_analysis,"Find all the values of $(i)^i$ and show that they are all real. Hence, or otherwise, find all $z$ such that $z^i$ is real.",
-complex_analysis,Does the limit of $f(z) = \frac{x^2y}{x^3+y^3} + ixy$ at the origin exist?,
-complex_analysis,Does the limit of $f(z) = \frac{\bar{z}}{z} - \frac{z}{\bar{z}^2}$ at the origin exist?,
-complex_analysis,Determine whether $f(z) = \begin{cases} \text{Re}\left[\frac{z}{|z|}\right] & z \neq 0 \\ 0 & z = 0 \end{cases}$ is continuous at the origin.,
-complex_analysis,Determine whether $f(z) = \begin{cases} \text{Im}\left[\frac{z}{1+|z|}\right] & z \neq 0 \\ 0 & z = 0 \end{cases}$ is continuous at the origin.,
-complex_analysis,"For $f(z) = \begin{cases} \text{Im}\left[\frac{z}{|z|}\right] & z \neq 0 \\ 0 & z = 0 \end{cases}$, determine if $f(z)$ is continuous at $z = 0$, $z = 5$ and $z = 5 + i$.",
-complex_analysis,"Find the constants $a$ and $b$ such that $f(z) = (2x - y) + i(ax + by)$ is differentiable for all $z$. Hence, find $f'(z)$.",
-complex_analysis,"Are the following functions analytic: (i) $f(z) = \text{Re}[z^2]$, (ii) $f(z) = \frac{i}{z^4}$, (iii) $f(z) = z - \bar{z}$, (iv) $f(z) = e^x(\sin y - i\cos y)$?",
+complex_analysis,Find all the values of $\ln(i^{1/2})$.,"Complex Numbers,Complex Logarithm and Powers"
+complex_analysis,"Find all the values of $(i)^i$ and show that they are all real. Hence, or otherwise, find all $z$ such that $z^i$ is real.","Complex Numbers,Complex Logarithm and Powers"
+complex_analysis,Does the limit of $f(z) = \frac{x^2y}{x^3+y^3} + ixy$ at the origin exist?,"Complex Numbers,Limits and Continuity of Complex Functions"
+complex_analysis,Does the limit of $f(z) = \frac{\bar{z}}{z} - \frac{z}{\bar{z}^2}$ at the origin exist?,"Complex Numbers,Limits and Continuity of Complex Functions"
+complex_analysis,Determine whether $f(z) = \begin{cases} \text{Re}\left[\frac{z}{|z|}\right] & z \neq 0 \\ 0 & z = 0 \end{cases}$ is continuous at the origin.,"Complex Numbers,Limits and Continuity of Complex Functions"
+complex_analysis,Determine whether $f(z) = \begin{cases} \text{Im}\left[\frac{z}{1+|z|}\right] & z \neq 0 \\ 0 & z = 0 \end{cases}$ is continuous at the origin.,"Complex Numbers,Limits and Continuity of Complex Functions"
+complex_analysis,"For $f(z) = \begin{cases} \text{Im}\left[\frac{z}{|z|}\right] & z \neq 0 \\ 0 & z = 0 \end{cases}$, determine if $f(z)$ is continuous at $z = 0$, $z = 5$ and $z = 5 + i$.","Complex Numbers,Limits and Continuity of Complex Functions"
+complex_analysis,"Find the constants $a$ and $b$ such that $f(z) = (2x - y) + i(ax + by)$ is differentiable for all $z$. Hence, find $f'(z)$.","Complex Numbers,Differentiability and Analycity of Complex Functions"
+complex_analysis,"Are the following functions analytic: (i) $f(z) = \text{Re}[z^2]$, (ii) $f(z) = \frac{i}{z^4}$, (iii) $f(z) = z - \bar{z}$, (iv) $f(z) = e^x(\sin y - i\cos y)$?","Complex Numbers,Differentiability and Analycity of Complex Functions"
 complex_analysis,"Find $f'(z)$, the derivative of $f(z) = 2xy - ix^2$. State clearly the point (or points) where $f'(z)$ exists.",
 complex_analysis,"Using the Cauchy-Riemann equations, determine the analyticity of the function $f(z) = z^2 - 2z + 3$ and find its derivative.",
 complex_analysis,"Evaluate $\int_C f(z) dz$ where $f(z) = \text{Re}[z]$, $C$ is the parabola $y = x^2$ from $0$ to $1 + i$.",
