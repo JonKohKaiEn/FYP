@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 from dotenv import load_dotenv
 from nala_wrappers import NalaGPTWrapper, NalaGeminiWrapper
 
@@ -12,21 +13,20 @@ with open("system_prompt.md", mode="r") as f:
     system_prompt: str = f.read()
 
 # load question bank
-with open("question_bank.txt", mode="r") as f:
-    question_bank: list[str] = [line.rstrip() for line in f.readlines()]
+df = pd.read_csv("question_bank.csv")
 
-output: list = []
-for question in question_bank:  # iterate through question bank
+# iterate through rows of the csv file
+for index, row in df.iterrows():
+    question: str = row['question']
     print(f"Question: {question}")
-    output.append(f"Question: {question}\n")
+    
     for llm_name, llm in llm_list:  # iterate through models
         print(f"Current Model: {llm_name}")
         response: str = llm.invoke(system_prompt, question)  # get model response
         print(f"Response: {response}")
-        output.append(f"Model: {llm_name} \t Response: {response}\n")
-    output.append("=" * 20 + "\n")
-    print("=" * 20)
+        
+        # write the response to the 'topics' column
+        # df.at[index, "topics"] = response
 
-# save output to text file
-with open("topic_output.txt", mode="w") as f:
-    f.writelines(output)
+# save the csv file
+# df.to_csv("question_bank.csv", index=False)
