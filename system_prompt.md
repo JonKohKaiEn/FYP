@@ -24,7 +24,7 @@ This is the topic list:
 - Cauchy's Integral Theorem and Formula
 - Vector Differentiation
 - Scalar and Vector Fields
-- Del Operator (Gradient, Divergence, and Curl)
+- Del Operator
 - Directional Derivative
 - Laplacian
 - Vector Line Integrals

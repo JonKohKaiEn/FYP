@@ -23,6 +23,8 @@ If the topics are very similar (e.g. Eigenvalues, Eigenvectors), merge them into
 
 These are some requirements that you must follow:
 - Output a valid JSON object with a single key "topics". Its value must be a list of strings, where each string contains exactly one topic.
+- Ensure that each topic does not contain any punctuation.
+- Strictly use words found in the lecture notes.
 - Do not include examples.
 """
 contents.append(prompt)
