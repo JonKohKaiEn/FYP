@@ -1,6 +1,7 @@
 import os
 import json
 import pandas as pd
+from sklearn.metrics import cohen_kappa_score
 from dotenv import load_dotenv
 from llm_wrappers import NalaGPTWrapper, GeminiWrapper
 
@@ -54,8 +55,8 @@ topic_list = {
     "Scalar Triple Product",
 }
 
-# tracking: for each model, store (total_target_topics, total_matched)
-results = {name: {"matched": 0, "invalid": 0, "total": 0} for name, _ in llm_list}
+topic_list_sorted = sorted(topic_list)
+results = {name: {"y_true": [], "y_pred": [], "invalid": 0} for name, _ in llm_list}
 
 total_questions = len(df)
 
@@ -99,9 +100,11 @@ for index, row in df.iterrows():
         num_matched = len(matched)
         num_invalid = len(extracted_topics - topic_list)
 
-        results[llm_name]["matched"] += num_matched
+        # build binary vectors over the full topic list for this question
+        for topic in topic_list_sorted:
+            results[llm_name]["y_true"].append(1 if topic in target_topics else 0)
+            results[llm_name]["y_pred"].append(1 if topic in extracted_topics else 0)
         results[llm_name]["invalid"] += num_invalid
-        results[llm_name]["total"] += num_target
 
         print(
             f"Matched {num_matched}/{num_target} topics. Extracted: {extracted_topics}"
@@ -109,16 +112,16 @@ for index, row in df.iterrows():
 
 # final report
 print("\n" + "=" * 60)
-print("TOPIC EXTRACTION ACCURACY REPORT")
+print("TOPIC EXTRACTION — COHEN'S KAPPA REPORT")
 print("=" * 60)
 
 for llm_name, stats in results.items():
-    total = stats["total"]
-    matched = stats["matched"]
+    y_true = stats["y_true"]
+    y_pred = stats["y_pred"]
     invalid = stats["invalid"]
-    accuracy = (matched / total * 100) if total > 0 else 0.0
+    kappa = cohen_kappa_score(y_true, y_pred) if len(y_true) > 0 else 0.0
     print(f"{llm_name}:")
-    print(f"  {matched}/{total} topics matched  ->  {accuracy:.2f}% accuracy")
+    print(f"  Cohen's Kappa: {kappa:.4f}")
     print(f"  {invalid} invalid topics")
 
 print("=" * 60)
