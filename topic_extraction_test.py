@@ -1,7 +1,7 @@
 import os
 import json
 import pandas as pd
-from sklearn.metrics import cohen_kappa_score
+from sklearn.metrics import cohen_kappa_score, classification_report
 from dotenv import load_dotenv
 from llm_wrappers import NalaGPTWrapper, GeminiWrapper
 
@@ -11,8 +11,14 @@ GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
 llm_list = [
     ("GPT-5 (High Thinking)", NalaGPTWrapper(NALA_API_KEY, reasoning_effort="high")),
     ("GPT-5 (Low Thinking)", NalaGPTWrapper(NALA_API_KEY, reasoning_effort="low")),
-    ("Gemini 3.1 Flash Lite Preview (High Thinking)", GeminiWrapper(GEMINI_API_KEY, thinking_level="high")),
-    ("Gemini 3.1 Flash Lite Preview (Low Thinking)", GeminiWrapper(GEMINI_API_KEY, thinking_level="minimal")),
+    (
+        "Gemini 3.1 Flash Lite Preview (High Thinking)",
+        GeminiWrapper(GEMINI_API_KEY, thinking_level="high"),
+    ),
+    (
+        "Gemini 3.1 Flash Lite Preview (Low Thinking)",
+        GeminiWrapper(GEMINI_API_KEY, thinking_level="minimal"),
+    ),
 ]
 
 # load system prompt
@@ -101,9 +107,14 @@ for index, row in df.iterrows():
         num_invalid = len(extracted_topics - topic_list)
 
         # build binary vectors over the full topic list for this question
-        for topic in topic_list_sorted:
-            results[llm_name]["y_true"].append(1 if topic in target_topics else 0)
-            results[llm_name]["y_pred"].append(1 if topic in extracted_topics else 0)
+        true_vector = [
+            1 if topic in target_topics else 0 for topic in topic_list_sorted
+        ]
+        pred_vector = [
+            1 if topic in extracted_topics else 0 for topic in topic_list_sorted
+        ]
+        results[llm_name]["y_true"].append(true_vector)
+        results[llm_name]["y_pred"].append(pred_vector)
         results[llm_name]["invalid"] += num_invalid
 
         print(
@@ -112,16 +123,30 @@ for index, row in df.iterrows():
 
 # final report
 print("\n" + "=" * 60)
-print("TOPIC EXTRACTION — COHEN'S KAPPA REPORT")
+print("TOPIC EXTRACTION — MULTILABEL CLASSIFICATION REPORT")
 print("=" * 60)
 
 for llm_name, stats in results.items():
-    y_true = stats["y_true"]
+    y_true = stats["y_true"]  # 2D: (n_questions, n_topics)
     y_pred = stats["y_pred"]
     invalid = stats["invalid"]
-    kappa = cohen_kappa_score(y_true, y_pred) if len(y_true) > 0 else 0.0
-    print(f"{llm_name}:")
-    print(f"  Cohen's Kappa: {kappa:.4f}")
+
+    # flatten to 1D for Cohen's Kappa
+    y_true_flat = [v for row in y_true for v in row]
+    y_pred_flat = [v for row in y_pred for v in row]
+    kappa = cohen_kappa_score(y_true_flat, y_pred_flat) if len(y_true_flat) > 0 else 0.0
+
+    print(f"\n{llm_name}:")
     print(f"  {invalid} invalid topics")
+    print(f"  Cohen's Kappa: {kappa:.4f}")
+    print("\n  Multilabel Classification Report (per topic):")
+    print(
+        classification_report(
+            y_true,
+            y_pred,
+            target_names=topic_list_sorted,
+            zero_division=0,
+        )
+    )
 
 print("=" * 60)
