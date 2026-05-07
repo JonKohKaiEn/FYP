@@ -16,6 +16,7 @@ dependencies = [
     "pdf2image>=1.17.0",
     "python-dotenv>=1.2.1",
     "scikit-learn>=1.8.0",
+    "streamlit>=1.57.0",
 ]
 
 [tool.uv]
