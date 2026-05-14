@@ -24,7 +24,7 @@ This is the topic list:
 - Cauchy's Integral Theorem and Formula
 - Vector Differentiation
 - Scalar and Vector Fields
-- Del Operator (Gradient, Divergence, and Curl)
+- Del Operator
 - Directional Derivative
 - Laplacian
 - Vector Line Integrals
@@ -34,5 +34,5 @@ This is the topic list:
 - Scalar Triple Product
 
 These are the requirements:
-- **Only** respond with a list of topics, separated by commas.
+- **Only** output a valid JSON object with a single key "topics". Its value must be a list of strings, where each string contains exactly one topic.
 - **Only** extract topics listed in the topics list.
